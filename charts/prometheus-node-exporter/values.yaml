@@ -168,7 +168,7 @@ tolerations:
 ##
 extraArgs: []
 #   - --collector.diskstats.ignored-devices=^(ram|loop|fd|(h|s|v)d[a-z]|nvme\\d+n\\d+p)\\d+$
-#   - --collector.textfile.directory=/run/prometheus
+   - --collector.textfile.directory=/run/prometheus
 
 ## Additional mounts from the host
 ##
@@ -200,9 +200,9 @@ sidecars: []
 ## Volume for sidecar containers
 ##
 sidecarVolumeMount: []
-##  - name: collector-textfiles
-##    mountPath: /run/prometheus
-##    readOnly: false
+  - name: collector-textfiles
+    mountPath: /run/prometheus
+    readOnly: false
 
 ## Additional InitContainers to initialize the pod
 ##
